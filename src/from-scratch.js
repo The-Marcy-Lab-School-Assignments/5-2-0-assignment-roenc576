@@ -23,13 +23,25 @@ class Rectangle extends Quadrilateral {
 
 }
 
-class Square {
+class Square extends Rectangle {
+  constructor(side1) {
+    super(side1, side1, side1, side1);
+    this.getPerimeter(this);
+    this.getArea(this);
+  }
 
+  getDiagonal() {
+    return Math.sqrt(this.side1 * this.side1 * 2);
+  }
 }
 
 /* Be creative with this one! */
 class Person {
-
+  constructor(name, age, isLeftHanded) {
+    this.name = name;
+    this.age = age;
+    this.isLeftHanded = isLeftHanded;
+  }
 }
 
 module.exports = {
